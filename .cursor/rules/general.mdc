@@ -1,0 +1,8 @@
+---
+description: General coding in this repo
+globs: *.c, *.h
+alwaysApply: true
+---
+- This codebase is only ever C, C headers, or ASM. NEVER write JavaScript or TypeScript EVER!
+- When Update .c files, you MUST check that you're updating headers appropriately
+- When parsing string files, do NOT strip or adjust special characters or smart quotes. This must be preserved.
