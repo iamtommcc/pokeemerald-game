@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-debug",
+      "type": "shell",
+      "command": "make",
+      "args": ["modern", "DINFO=1", "-j32"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+    "label": "build-run-mgba",
+    "type": "shell",
+    "command": "${workspaceFolder}/scripts/start-mgba.sh",
+    "args": ["${workspaceFolder}/pokeemerald.elf"],
+    "problemMatcher": [],
+    "runOptions": {
+        "instanceLimit": 1
+    },
+    "dependsOn": ["build-debug"],
+    },
+    {
+      "label": "stop-mgba",
+      "type": "shell",
+      "command": "pkill -f mGBA",
+      "problemMatcher": []
+    },
+    {
+      "label": "build-run",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/start-retroarch.sh",
+      "args": ["${workspaceFolder}/pokeemerald.gba"],
+      "problemMatcher": [],
+      "runOptions": {
+          "instanceLimit": 1
+      },
+      "dependsOn": ["build-debug"]
+    }
+  ]
+}
