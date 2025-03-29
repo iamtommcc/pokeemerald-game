@@ -453,6 +453,7 @@ $(ELF): $(LD_SCRIPT) $(LD_SCRIPT_DEPS) $(OBJS) libagbsyscall
 $(ROM): $(ELF)
 	$(OBJCOPY) -O binary $< $@
 	$(FIX) $@ -p --silent
+	@scripts/successful-build-output.sh $< $@
 
 # Symbol file (`make syms`)
 $(SYM): $(ELF)
