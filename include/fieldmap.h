@@ -1,15 +1,13 @@
 #ifndef GUARD_FIELDMAP_H
 #define GUARD_FIELDMAP_H
 
-#define NUM_TILES_IN_PRIMARY 512
 #define NUM_TILES_TOTAL 1024
 #define NUM_METATILES_IN_PRIMARY 512
 #define NUM_METATILES_TOTAL 1024
-#define NUM_PALS_IN_PRIMARY 6
 #define NUM_PALS_TOTAL 13
 #define MAX_MAP_DATA_SIZE 10240
 
-#define NUM_TILES_PER_METATILE 8
+#define NUM_TILES_PER_METATILE 12
 
 // Map coordinates are offset by 7 when using the map
 // buffer because it needs to load sufficient border
@@ -18,6 +16,19 @@
 #define MAP_OFFSET 7
 #define MAP_OFFSET_W (MAP_OFFSET * 2 + 1)
 #define MAP_OFFSET_H (MAP_OFFSET * 2)
+
+// References
+#define NUM_TILES_IN_PRIMARY_EMERALD 512
+#define NUM_METATILES_IN_PRIMARY_EMERALD 512
+#define NUM_PALS_IN_PRIMARY_EMERALD 6
+
+#define NUM_TILES_IN_PRIMARY 640
+#define NUM_METATILES_IN_PRIMARY 640
+#define NUM_PALS_IN_PRIMARY 7
+
+#define NUM_TILES_IN_PRIMARY_FRLG 640
+#define NUM_METATILES_IN_PRIMARY_FRLG 640
+#define NUM_PALS_IN_PRIMARY_FRLG 7
 
 #include "main.h"
 
