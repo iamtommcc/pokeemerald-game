@@ -5,7 +5,7 @@
       "label": "build-debug",
       "type": "shell",
       "command": "make",
-      "args": ["modern", "DINFO=1", "-j32"],
+      "args": ["DINFO=1", "-j32"],
       "group": "build",
       "problemMatcher": []
     },
