@@ -374,7 +374,7 @@ void SoundInit(struct SoundInfo *soundInfo)
 
     soundInfo->MPlayJumpTable = gMPlayJumpTable;
 
-    SampleFreqSet(SOUND_MODE_FREQ_13379);
+    SampleFreqSet(SOUND_MODE_FREQ_18157);
 
     soundInfo->ident = ID_NUMBER;
 }
